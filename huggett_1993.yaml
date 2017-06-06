@@ -11,6 +11,7 @@ symbols:
 
 definitions:
     c: y+r*s-a
+    
 equations:
 
     arbitrage:
@@ -37,7 +38,7 @@ calibration:
     r: 0.75
     rho: 0.85
     ybar: 0.0
-    sig_y: 0.016
+    sig_y: 0.017
     abar: -2.0
     m: 0
     V0: (c^(1-sigma)/(1-sigma))/(1-beta)
