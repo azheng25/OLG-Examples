@@ -34,9 +34,9 @@ equations:
 calibration:
     
     # parameters taken from Huggett (1993) paper
-    beta: 0.9932
+    beta: 0.97
     sigma: 2
-    r: 0.000002
+    r: 0.00002
     rho: 0.85
     ybar: 0.0
     sig_y: 0.01
