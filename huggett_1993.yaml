@@ -1,5 +1,7 @@
 name: Huggett 1993
 
+# s is the level of savings: c+s(+1)=(1+r)*s+y
+# define a, the control, as: a=s(+1)-s 
 symbols:
     exogenous: [lny] # exogenous states
     states: [s] # endogenous states
@@ -36,10 +38,10 @@ calibration:
     # parameters taken from Huggett (1993) paper
     beta: 0.97
     sigma: 2
-    r: 0.00002
-    rho: 0.85
+    r:  0.0001
+    rho: 0.6
     ybar: 0.0
-    sig_y: 0.01
+    sig_y: 0.4
     abar: -2.0
     m: 0
     V0: (c^(1-sigma)/(1-sigma))/(1-beta)
