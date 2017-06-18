@@ -1,7 +1,7 @@
 name: Huggett 1996
 
 symbols:
-    exogenous: [lny,t] # exogenous states: y is the income and t is the age( if t=0 the agent is dead)
+    exogenous: [lny,t] # exogenous states: y is the income and t is an indicator for whether the agent is alive or not( if t=0 the agent is dead)
     states: [s] # endogenous states
     controls: [a] # here the control is the difference in savings between tomorrow's assets and today's assets: a=s(+1)-s
     expectations: [m]
