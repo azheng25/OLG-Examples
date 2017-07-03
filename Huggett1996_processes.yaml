@@ -1,7 +1,7 @@
 name: Huggett 1996
 
 symbols:
-    exogenous: [lny,t] # exogenous states: y is the income and t is an indicator for whether the agent is alive or not( if t=1 the agent is dead)
+    exogenous: [lny,age,t] # exogenous states: y is the income and t is an indicator for whether the agent is alive or not( if t=1 the agent is dead)
     states: [s] # endogenous states
     controls: [a] # here the control is the difference in savings between tomorrow's assets and today's assets: a=s(+1)-s
     expectations: [m]
@@ -37,7 +37,7 @@ calibration:
     beta: 0.98
     sigma: 3
     r: 0.02
-    rho: 0.85
+    rho: 0.75
     ybar: 0.0
     sig_y: 0.1
     abar: -2.0
@@ -45,7 +45,7 @@ calibration:
     sig_t: 0.4
     m: 0
     V0: (c^(1-sigma)/(1-sigma))/(1-beta)
-    
+    age: 1
     # endogenous variables - initial conditions
     a: 0.0
     s: 0.0
@@ -58,10 +58,9 @@ calibration:
    
 exogenous: !Product
     p1: !VAR1 # Income Process
-         rho: 0.85
+         rho: 0.75
          Sigma: [[sig_y^2]]
-         N: 5
-         
+         N: 3
          
     p2: !AgingProcess
         mu: 0.02
